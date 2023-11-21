@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>每週刷題第一週</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+</head>
+
+<body>
+    <div class="container">
+        <h3>每週刷題第一週</h3>
+        <h5>學習目標：學習練習使用基礎的四則運算來熟悉加減乘除與重構簡單的計算元件。</h5>
+        <div class="py-5">
+            <h6>題目1：相加產生器 (+)</h6>
+            <p> // input 輸入<br />
+                add(1,1);<br />
+                add(2,2);<br />
+                add(3,3);<br />
+                // output 輸出<br />
+                2<br />
+                4<br />
+                6<br />
+            </p>
+        </div>
+        <div>
+            <h6>題目2：相減產生器 (-)</h6>
+            <p> // input 輸入<br />
+                subtract(1,1);<br />
+                subtract(2,3);<br />
+                subtract(8,3);<br />
+                // output 輸出<br />
+                0<br />
+                -1<br />
+                5<br />
+            </p>
+        </div>
+    </div>
+
+
+
+
+
+
+    // input 輸入
+
+
+
+
+    // output 輸出
+    0
+    -1
+    5
+    題目3：相乘三次 (*)
+    輸入一個數字後，該參數會相乘 3 次，例如輸入 2，輸出為 2*2*2=8
+    // input 輸入
+    multiply3Times(3);
+    multiply3Times(0);
+    multiply3Times(9);
+
+    // output 輸出
+    27
+    0
+    729
+    題目4：取 2 的餘數（%）
+    // input 輸入
+    remainder(3);
+    remainder(2);
+    remainder(8);
+
+    // output 輸出
+    1
+    0
+    0
+    題目5：取 2 的餘數 + 判斷是否可整除 (% + 結果判斷)
+    // input 輸入
+    isDivisible(3);
+    isDivisible(2);
+    isDivisible(8);
+
+    // output 輸出
+    未整除
+    已整除
+    已整除
+    題目6：我要存錢(區域變數、全域變數)
+    請透過 addBankMoney 函式，來累加 bankMoney 變數
+
+    let bankMoney = 0;
+
+    <!-- 作答開始  -->
+    function addBankMoney(num){
+
+    }
+    <!-- 作答結束  -->
+
+    // input 輸入
+    addBankMoney(1);
+    addBankMoney(50);
+    addBankMoney(10);
+
+    // output 輸出
+    bankMoney 值為 1
+    bankMoney 值為 51
+    bankMoney 值為 61
+    題目7：簡單計算機
+    // input 輸入
+    calculate(3,5,'+');
+    calculate(4,2,'-');
+    calculate(7,9,'*');
+    calculate(5,5,'/');
+
+    // output 輸出
+    8
+    2
+    63
+    1
+
+    題目8：簡單計算機 + 顯示算式過程
+    // input 輸入
+    calculateProcess(3,5,'+');
+    calculateProcess(4,2,'-');
+    calculateProcess(7,9,'*');
+    calculateProcess(5,5,'/');
+
+    // output 輸出
+    "3+5=8"
+    "4-2=2"
+    "7*9=63"
+    "5/5=1"
+    題目9：商業邏輯題：增加服務費
+    六角冰果店即將開張，但發現收銀機漏寫服務費邏輯，還請協助撰寫：
+
+    一個 serviceCharge函式，來計算 5% 服務費並回傳總計費用為多少。
+    情境：小華吃了一碗冰，小計 100 元，加上服務費為 105 元。
+
+    <!-- 作答開始 -->
+    function serviceCharge(num){
+
+    }
+    <!-- 作答結束  -->
+    const total = serviceCharge(100);
+    console.log(`您總計費用為 ${total}`)
+    題目10：重構題：消除重複，抽離變因
+    六角冰店超賺，於是開了二店為八角冰店，收銀機商業邏輯調整為：
+
+    兩家店同時聘請專業執事與女僕，增加服務費為 10%
+    六角冰店一碗冰 100 元，八角冰店一碗冰 800 元
+    sixAngleCalculate、eightAngleCalculate 丟入 num 冰碗數量，就可獲得總費用
+
+    重構思路
+    兩個函式裡面的服務費都是一樣的，可以嘗試抽出來成一個新函式 serviceCharge，專門來計算兩間店的服務費
+    // 第一個參數為冰的數量
+    function sixAngleCalculate(num){
+    const subTotal = num * 100;
+    const serviceCharge = subTotal * 0.1;
+    const total = subTotal + serviceCharge;
+    return total;
+    }
+
+    //
+    function eightAngleCalculate(num){
+    const subTotal = num * 800;
+    const serviceCharge = subTotal * 0.1;
+    const total = subTotal + serviceCharge;
+    return total;
+    }
+    </div>
+    <script src="./week01.js"></script>
+</body>
+
+</html>
