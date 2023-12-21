@@ -97,7 +97,7 @@ stringArraySwitcher('1,2,3')
 console.log("=====題目六：字串切割=====");
 // .split( 指定切割處 , 切割的最大數量 )
 function getArea(str) {
-    const newStr = str.split('4', 3);
+    const newStr = str.split('', 3);
     return console.log(newStr);
 }
 getArea("高雄市前鎮區一心二路33號");
@@ -138,9 +138,17 @@ console.log("=====題目七：字串黏合=====");
 // false
 // 題目十：反轉字串==============================
 // 創造一個函式用於反轉字串內文字的順序。
+// let myReversedString = myString.split("").reverse().join("");
 
 // // input 輸入
 // stringReverser("hello")
 
 // // output 輸出
 // olleh
+console.log("=====題目十：反轉字串=====");
+
+function stringReverser(str) {
+    let newStr = str.split("").reverse().join('');
+    return console.log(newStr);
+}
+stringReverser("hello");
