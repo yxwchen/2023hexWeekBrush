@@ -86,7 +86,7 @@ console.log("=====A5:字串陣列互換=====");
 stringArraySwitcher(['A', 'B', 'C'])
 stringArraySwitcher('1,2,3')
 
-// TODO 題目六：字串切割=========================
+// TODO （chatgpt help) 題目六：字串切割=========================
 // // input 輸入
 // getArea("高雄市前鎮區一心二路33號");
 // getArea("高雄市新興區新興路66號");
@@ -97,8 +97,8 @@ stringArraySwitcher('1,2,3')
 console.log("=====題目六：字串切割=====");
 // .split( 指定切割處 , 切割的最大數量 )
 function getArea(str) {
-    const newStr = str.split('', 3);
-    return console.log(newStr);
+    const match = str.match(/市(.+區)/);
+    return match ? console.log(match[1]) : console.log('');
 }
 getArea("高雄市前鎮區一心二路33號");
 getArea("高雄市新興區新興路66號");
@@ -110,8 +110,10 @@ getArea("高雄市新興區新興路66號");
 // "我今天想來點六角冰咖啡"
 console.log("=====題目七：字串黏合=====");
 
-
-
+function concatString(str1,str2){
+    return console.log(`${str1}${str2}`);
+}
+concatString("我今天想來點", "六角冰咖啡");
 
 // 題目八：顯示字串=================================
 // 請嘗試修改以下代碼，使其可正確運行 (留意單、雙引號)。
@@ -122,6 +124,8 @@ console.log("=====題目七：字串黏合=====");
 
 // // output 輸出
 // '字串'是 JavaScript 中一種基礎且重要的"型別"，必須好好學習。
+console.log("=====題目八：顯示字串=====");
+console.log(`'字串'是是 JavaScript 中一種基礎且重要的"型別"，必須好好學習。`)
 
 // 題目九：擷取字串內容=============================
 // 創造一個函式用於擷取輸入字串的指定索引字元，如找不到，回傳 false 。
@@ -136,6 +140,18 @@ console.log("=====題目七：字串黏合=====");
 // "H"
 // "l"
 // false
+console.log("=====題目九：擷取字串內容=====");
+const input = "Hello";
+function getCharacter(input,num){
+if(num >= 0 && num < input.length){
+    return console.log(input.charAt(num));
+}else{
+    return console.log(false);
+}
+}
+getCharacter(input, 1);
+getCharacter(input, 3);
+getCharacter(input, 10);
 // 題目十：反轉字串==============================
 // 創造一個函式用於反轉字串內文字的順序。
 // let myReversedString = myString.split("").reverse().join("");
